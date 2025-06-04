@@ -4,10 +4,7 @@ go 1.24.3
 
 tool github.com/stealthrocket/wasi-go/cmd/wasirun
 
-require (
-	github.com/breml/rootcerts v0.2.21
-	github.com/stealthrocket/net v0.2.1
-)
+require github.com/stealthrocket/net v0.2.1
 
 require (
 	github.com/stealthrocket/wasi-go v0.8.0 // indirect

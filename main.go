@@ -1,19 +1,19 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"net/http"
 	"os"
-
-	// Need to test with more runtimes and platforms if this is really needed.
-	// If yes: that'd be pretty bad, as we need to "renovate" the plugin all the time.
-	_ "github.com/breml/rootcerts"
 
 	_ "github.com/stealthrocket/net/http"
 	_ "github.com/stealthrocket/net/wasip1"
 )
 
 func main() {
+	fmt.Println(os.Getenv("SSL_CERT_FILE"))
+	fmt.Println(os.Getenv("SSL_CERT_DIR"))
+
 	req, err := http.NewRequest("GET", "https://ip.me", nil)
 	if err != nil {
 		panic(err)
