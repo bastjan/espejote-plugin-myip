@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"io"
 	"net/http"
 	"os"
@@ -11,9 +10,6 @@ import (
 )
 
 func main() {
-	fmt.Println(os.Getenv("SSL_CERT_FILE"))
-	fmt.Println(os.Getenv("SSL_CERT_DIR"))
-
 	req, err := http.NewRequest("GET", "https://ip.me", nil)
 	if err != nil {
 		panic(err)
